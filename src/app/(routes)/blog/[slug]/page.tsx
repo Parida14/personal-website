@@ -2,10 +2,8 @@ import { Header } from "@/components/layout/header"
 import { getAllPosts, getPostBySlug } from "@/lib/blog"
 import { formatDate } from "@/lib/utils"
 
-type BlogPostPageProps = {
-  params: {
-    slug: string
-  }
+interface PageProps {
+  params: { slug: string }
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
@@ -16,7 +14,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
+export async function generateMetadata({ params }: PageProps) {
   const post = await getPostBySlug(params.slug)
   return {
     title: post.title,
@@ -24,7 +22,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({ params }: PageProps) {
   const post = await getPostBySlug(params.slug)
 
   return (
