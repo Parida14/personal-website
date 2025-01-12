@@ -2,10 +2,11 @@ import { Header } from "@/components/layout/header"
 import { getAllPosts, getPostBySlug } from "@/lib/blog"
 import { formatDate } from "@/lib/utils"
 
-interface BlogPostPageProps {
+type BlogPostPageProps = {
   params: {
     slug: string
   }
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 export async function generateStaticParams() {
