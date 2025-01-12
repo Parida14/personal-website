@@ -82,7 +82,7 @@ export default function ContactPage() {
             </Card>
           </div>
 
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Card>
               <CardHeader>
                 <CardTitle>Quick Overview</CardTitle>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
         </section>
       </main>
     </div>
