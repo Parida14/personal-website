@@ -7,6 +7,11 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 
 export default function Home() {
+  const analyticsSkills = ["SQL", "Python", "dbt", "Spark", "Snowflake", "Data Modeling", "PostgreSQL", "Airflow"]
+  const softwareSkills = ["TypeScript", "React", "Next.js", "FastAPI", "REST APIs", "Recharts"]
+  const platformSkills = ["Git", "Docker", "GitHub Actions", "AWS", "MinIO", "Vercel", "CI/CD"]
+  const walletHealthTech = ["Python", "FastAPI", "Airflow", "PostgreSQL", "MinIO", "Next.js", "TypeScript"]
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -51,12 +56,14 @@ export default function Home() {
                   Hi, I&apos;m Lagnajit Parida
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Data Analyst & Engineer
+                  Data Analyst & Engineer building analytics platforms
                 </p>
               </div>
             </div>
             <p className="max-w-[700px] text-lg text-muted-foreground">
-              Experienced in transforming complex data into actionable insights. Currently expanding into software engineering and data architecture, building modern web applications and efficient data solutions.
+              I turn complex data into reliable models, APIs, and dashboards. My
+              current work focuses on full-stack data products that connect analytics
+              engineering, backend services, and modern web interfaces.
             </p>
             <div className="flex gap-4">
               <Button asChild>
@@ -76,11 +83,11 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>Data Analytics & Engineering</CardTitle>
-                <CardDescription>Analysis & Data Pipeline Development</CardDescription>
+                <CardDescription>Analytics, modeling, and pipeline development</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {["SQL", "Python", "Spark", "dbt", "Snowflake", "Data Modeling"].map((skill) => (
+                  {analyticsSkills.map((skill) => (
                     <span
                       key={skill}
                       className="rounded-full bg-secondary px-3 py-1 text-sm"
@@ -95,11 +102,11 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>Software Development</CardTitle>
-                <CardDescription>Web & Application Development</CardDescription>
+                <CardDescription>APIs, dashboards, and application interfaces</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {["TypeScript", "React", "Next.js", "Node.js", "REST APIs"].map((skill) => (
+                  {softwareSkills.map((skill) => (
                     <span
                       key={skill}
                       className="rounded-full bg-secondary px-3 py-1 text-sm"
@@ -113,12 +120,12 @@ export default function Home() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Tools & Technologies</CardTitle>
-                <CardDescription>Development & Collaboration</CardDescription>
+                <CardTitle>Platforms & Delivery</CardTitle>
+                <CardDescription>Infrastructure, workflow, and deployment</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {["Git", "Docker", "AWS", "CI/CD", "Agile"].map((skill) => (
+                  {platformSkills.map((skill) => (
                     <span
                       key={skill}
                       className="rounded-full bg-secondary px-3 py-1 text-sm"
@@ -138,18 +145,40 @@ export default function Home() {
                 <CardDescription>Some of my recent work</CardDescription>
               </CardHeader>
               <CardContent className="grid gap-4 md:grid-cols-2">
-                <div className="space-y-2">
-                  <h3 className="font-semibold">TBD</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {/* TBD */}
-                  </p>
+                <div className="space-y-3">
+                  <div className="space-y-2">
+                    <h3 className="font-semibold">
+                      <Link
+                        href="https://github.com/Parida14/wallet-health-score"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:underline"
+                      >
+                        Wallet Health Score
+                      </Link>
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Full-stack analytics project for scoring wallet health with data
+                      pipelines, an API layer, and a web dashboard.
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {walletHealthTech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full bg-secondary px-3 py-1 text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <Button variant="outline" size="sm" asChild>
+                    <Link href="https://github.com/Parida14/wallet-health-score" target="_blank" rel="noreferrer">
+                      <GitHubLogoIcon className="mr-2 h-4 w-4" />
+                      View on GitHub
+                    </Link>
+                  </Button>
                 </div>
-                {/* <div className="space-y-2">
-                  <h3 className="font-semibold">Data Pipeline Automation</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Built automated data pipelines using Python and SQL, reducing manual reporting time by 80% and improving data accuracy.
-                  </p>
-                </div> */}
               </CardContent>
             </Card>
           </div>

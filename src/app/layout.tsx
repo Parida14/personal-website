@@ -8,15 +8,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Lagnajit Parida | Personal Portfolio & Blog",
+    default: "Lagnajit Parida | Data Analytics & Engineering Portfolio",
     template: "%s | Lagnajit Parida",
   },
-  description: "Senior Data Analyst exploring the intersection of data analytics, engineering, and modern web development.",
+  description: "Data analyst and engineer building analytics platforms, data pipelines, APIs, and dashboards with Python, SQL, FastAPI, Airflow, and Next.js.",
   keywords: [
-    "Data Analytics and Engineering",
-    "Web Development",
+    "Data Analytics",
+    "Data Engineering",
+    "Analytics Engineering",
+    "Data Products",
+    "Blockchain Analytics",
     "Python",
     "SQL",
+    "FastAPI",
+    "Airflow",
+    "PostgreSQL",
     "Next.js",
     "React",
     "TypeScript",
@@ -33,15 +39,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://put your website url here.com",
-    title: "Lagnajit Parida | Data Analytics Portfolio & Blog",
-    description: "Senior Data Analyst exploring the intersection of data analytics, engineering, and modern web development.",
+    url: "https://lagnajitparida.com",
+    title: "Lagnajit Parida | Data Analytics & Engineering Portfolio",
+    description: "Data analyst and engineer building analytics platforms, data pipelines, APIs, and dashboards.",
     siteName: "Lagnajit Parida",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lagnajit Parida | Data Analytics Portfolio & Blog",
-    description: "Senior Data Analyst exploring the intersection of data analytics, engineering, and modern web development.",
+    title: "Lagnajit Parida | Data Analytics & Engineering Portfolio",
+    description: "Data analyst and engineer building analytics platforms, data pipelines, APIs, and dashboards.",
     creator: "@lparida27",
   },
   icons: {
