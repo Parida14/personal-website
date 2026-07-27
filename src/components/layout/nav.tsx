@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils"
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -31,4 +30,4 @@ export function MainNav() {
       ))}
     </nav>
   )
-} 
+}

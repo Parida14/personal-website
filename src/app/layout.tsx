@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "Lagnajit Parida | Data Analytics & Engineering Portfolio",
     template: "%s | Lagnajit Parida",
   },
-  description: "Data analyst and engineer building analytics platforms, data pipelines, APIs, and dashboards with Python, SQL, FastAPI, Airflow, and Next.js.",
+  description: "Staff Data Analyst building reliable data products, lakehouse models, and internal tools.",
   keywords: [
     "Data Analytics",
     "Data Engineering",
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "Blockchain Analytics",
     "Python",
     "SQL",
-    "FastAPI",
-    "Airflow",
+    "Databricks",
+    "Spark",
+    "dbt",
     "PostgreSQL",
     "Next.js",
     "React",
     "TypeScript",
     "Portfolio",
-    "Blog",
   ],
   authors: [
     {
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://lagnajitparida.com",
     title: "Lagnajit Parida | Data Analytics & Engineering Portfolio",
-    description: "Data analyst and engineer building analytics platforms, data pipelines, APIs, and dashboards.",
+    description: "Staff Data Analyst building reliable data products, lakehouse models, and internal tools.",
     siteName: "Lagnajit Parida",
   },
   twitter: {
     card: "summary_large_image",
     title: "Lagnajit Parida | Data Analytics & Engineering Portfolio",
-    description: "Data analyst and engineer building analytics platforms, data pipelines, APIs, and dashboards.",
+    description: "Staff Data Analyst building reliable data products, lakehouse models, and internal tools.",
     creator: "@lparida27",
   },
   icons: {

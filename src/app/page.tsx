@@ -1,186 +1,69 @@
 import { Header } from "@/components/layout/header"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
+import { GitHubLogoIcon, LinkedInLogoIcon, FileIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 
 export default function Home() {
-  const analyticsSkills = ["SQL", "Python", "dbt", "Spark", "Snowflake", "Data Modeling", "PostgreSQL", "Airflow"]
-  const softwareSkills = ["TypeScript", "React", "Next.js", "FastAPI", "REST APIs", "Recharts"]
-  const platformSkills = ["Git", "Docker", "GitHub Actions", "AWS", "MinIO", "Vercel", "CI/CD"]
-  const walletHealthTech = ["Python", "FastAPI", "Airflow", "PostgreSQL", "MinIO", "Next.js", "TypeScript"]
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-          <div className="flex max-w-[980px] flex-col items-start gap-4">
-            <div className="flex items-center gap-4">
-              <HoverCard>
-                <HoverCardTrigger asChild>
-                  <Avatar className="h-24 w-24">
-                    <AvatarImage src="/images/lagnajit_photo.jpg" alt="Lagnajit Parida" />
-                    <AvatarFallback>LP</AvatarFallback>
-                  </Avatar>
-                </HoverCardTrigger>
-                <HoverCardContent className="w-80">
-                  <div className="flex justify-between space-x-4">
-                    <Avatar className="h-24 w-24">
-                      <AvatarImage src="/images/lagnajit_photo.jpg" />
-                      <AvatarFallback>LP</AvatarFallback>
-                    </Avatar>
-                    <div className="space-y-1">
-                      <h4 className="text-sm font-semibold">Lagnajit Parida</h4>
-                      <p className="text-sm">Data Analyst and Engineer</p>
-                      <div className="flex gap-2">
-                        <Button variant="ghost" size="icon" asChild>
-                          <Link href="https://github.com/Parida14" target="_blank">
-                            <GitHubLogoIcon className="h-4 w-4" />
-                          </Link>
-                        </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                          <Link href="https://linkedin.com/in/lparida" target="_blank">
-                            <LinkedInLogoIcon className="h-4 w-4" />
-                          </Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </HoverCardContent>
-              </HoverCard>
+        <section className="container py-16 md:py-24">
+          <div className="mx-auto max-w-2xl space-y-10">
+            <div className="flex items-center gap-5">
+              <Avatar className="h-20 w-20">
+                <AvatarImage src="/images/lagnajit_photo.jpg" alt="Lagnajit Parida" />
+                <AvatarFallback>LP</AvatarFallback>
+              </Avatar>
               <div>
-                <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-                  Hi, I&apos;m Lagnajit Parida
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  Data Analyst & Engineer building analytics platforms
-                </p>
+                <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Lagnajit Parida</h1>
+                <p className="mt-1 text-lg text-muted-foreground">Staff Data Analyst · Data Products & Analytics Engineering</p>
               </div>
             </div>
-            <p className="max-w-[700px] text-lg text-muted-foreground">
-              I turn complex data into reliable models, APIs, and dashboards. My
-              current work focuses on full-stack data products that connect analytics
-              engineering, backend services, and modern web interfaces.
-            </p>
-            <div className="flex gap-4">
+
+            <div className="space-y-4 text-lg leading-8 text-muted-foreground">
+              <p>I build reliable data products, lakehouse models, and internal tools for operational teams.</p>
+              <p>My work spans Python, SQL, Databricks, Spark, dbt, analytics, and practical web interfaces.</p>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
               <Button asChild>
-                <Link href="/contact">
-                  Get in touch
+                <Link href="/assets/resume/Lagnajit_Parida_Resume.pdf" target="_blank">
+                  <FileIcon className="mr-2 h-4 w-4" />
+                  View resume
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/blog">
-                  Read my blog
-                </Link>
+                <Link href="/contact">Contact</Link>
               </Button>
             </div>
-          </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <Card>
-              <CardHeader>
-                <CardTitle>Data Analytics & Engineering</CardTitle>
-                <CardDescription>Analytics, modeling, and pipeline development</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {analyticsSkills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full bg-secondary px-3 py-1 text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <div className="border-t pt-8">
+              <h2 className="text-xl font-semibold">Selected project</h2>
+              <div className="mt-3 space-y-2">
+                <Link
+                  href="https://github.com/Parida14/wallet-health-score"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 font-medium hover:underline"
+                >
+                  <GitHubLogoIcon className="h-4 w-4" />
+                  Wallet Health Score
+                </Link>
+                <p className="text-muted-foreground">A full-stack analytics project with data pipelines, an API layer, and a web dashboard.</p>
+              </div>
+            </div>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Software Development</CardTitle>
-                <CardDescription>APIs, dashboards, and application interfaces</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {softwareSkills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full bg-secondary px-3 py-1 text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Platforms & Delivery</CardTitle>
-                <CardDescription>Infrastructure, workflow, and deployment</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {platformSkills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full bg-secondary px-3 py-1 text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Featured Projects</CardTitle>
-                <CardDescription>Some of my recent work</CardDescription>
-              </CardHeader>
-              <CardContent className="grid gap-4 md:grid-cols-2">
-                <div className="space-y-3">
-                  <div className="space-y-2">
-                    <h3 className="font-semibold">
-                      <Link
-                        href="https://github.com/Parida14/wallet-health-score"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="hover:underline"
-                      >
-                        Wallet Health Score
-                      </Link>
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Full-stack analytics project for scoring wallet health with data
-                      pipelines, an API layer, and a web dashboard.
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {walletHealthTech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full bg-secondary px-3 py-1 text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <Link href="https://github.com/Parida14/wallet-health-score" target="_blank" rel="noreferrer">
-                      <GitHubLogoIcon className="mr-2 h-4 w-4" />
-                      View on GitHub
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+              <Link href="https://linkedin.com/in/lparida" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground">
+                <LinkedInLogoIcon className="h-4 w-4" /> LinkedIn
+              </Link>
+              <Link href="https://github.com/Parida14" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground">
+                <GitHubLogoIcon className="h-4 w-4" /> GitHub
+              </Link>
+              <Link href="mailto:lagnajit.parida1@gmail.com" className="hover:text-foreground">Email</Link>
+            </div>
           </div>
         </section>
       </main>
