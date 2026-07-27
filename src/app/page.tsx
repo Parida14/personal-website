@@ -1,5 +1,4 @@
 import { Header } from "@/components/layout/header"
-import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { GitHubLogoIcon, LinkedInLogoIcon, FileIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
@@ -27,15 +26,6 @@ export default function Home() {
               <p>My work spans Python, SQL, Databricks, Spark, dbt, analytics, and practical web interfaces.</p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Button asChild>
-                <Link href="/assets/resume/Lagnajit_Parida_Resume.pdf" target="_blank">
-                  <FileIcon className="mr-2 h-4 w-4" />
-                  View resume
-                </Link>
-              </Button>
-            </div>
-
             <div className="border-t pt-8">
               <h2 className="text-xl font-semibold">Contact</h2>
               <p className="mt-2 text-muted-foreground">Open to conversations about data products, analytics engineering, and operational systems.</p>
@@ -47,6 +37,9 @@ export default function Home() {
               </Link>
               <Link href="https://github.com/Parida14" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground">
                 <GitHubLogoIcon className="h-4 w-4" /> GitHub
+              </Link>
+              <Link href="/assets/resume/Lagnajit_Parida_Resume.pdf" target="_blank" className="inline-flex items-center gap-1.5 hover:text-foreground">
+                <FileIcon className="h-4 w-4" /> Resume
               </Link>
               <Link href="mailto:lagnajit.parida1@gmail.com" className="hover:text-foreground">Email</Link>
             </div>
