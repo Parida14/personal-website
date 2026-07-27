@@ -40,22 +40,11 @@ export default function Home() {
             </div>
 
             <div className="border-t pt-8">
-              <h2 className="text-xl font-semibold">Selected project</h2>
-              <div className="mt-3 space-y-2">
-                <Link
-                  href="https://github.com/Parida14/wallet-health-score"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-medium hover:underline"
-                >
-                  <GitHubLogoIcon className="h-4 w-4" />
-                  Wallet Health Score
-                </Link>
-                <p className="text-muted-foreground">A full-stack analytics project with data pipelines, an API layer, and a web dashboard.</p>
-              </div>
+              <h2 className="text-xl font-semibold">Contact</h2>
+              <p className="mt-2 text-muted-foreground">Open to conversations about data products, analytics engineering, and operational systems.</p>
             </div>
 
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <Link href="https://linkedin.com/in/lparida" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-foreground">
                 <LinkedInLogoIcon className="h-4 w-4" /> LinkedIn
               </Link>
