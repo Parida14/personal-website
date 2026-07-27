@@ -34,9 +34,6 @@ export default function Home() {
                   View resume
                 </Link>
               </Button>
-              <Button variant="outline" asChild>
-                <Link href="/contact">Contact</Link>
-              </Button>
             </div>
 
             <div className="border-t pt-8">
